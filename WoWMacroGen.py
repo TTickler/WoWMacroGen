@@ -9,6 +9,7 @@ class Macro(object):
 		self._target = ''
 		self._spell = ''
 		self._icon = ''
+		self._command = ''
 
 	
 	#property for the target of macro being generated	
@@ -29,7 +30,7 @@ class Macro(object):
 	def spell(self, spell):
 		self._spell = spell
 
-	@propery
+	@property
 	def icon(self):
 		return self._icon
 
@@ -37,6 +38,13 @@ class Macro(object):
 	def icon(self, icon):
 		self._icon = icon
 
+	@property
+	def command(self):
+		return self._command
+
+	@command.setter
+	def command(self, command):
+		self._command = command
 
 class MacroCLI(object):
 	def __init__(self):
