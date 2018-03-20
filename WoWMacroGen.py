@@ -1,6 +1,6 @@
 import ConfigParser
 import os
-
+import WoWClass
 
 class Macro(object):
     def __init__(self):
@@ -45,6 +45,17 @@ class Macro(object):
         self._command = command
 
 
+    #returns True if macro is generated successfully 
+    #else, returns false
+    def generateMacro(self):
+        
+
+
+	return True
+
+	return False
+
+
 class MacroCLI(object):
     def __init__(self):
         self.test = 5
@@ -68,7 +79,9 @@ class MacroCLI(object):
     # returns true if specific argument contains valid flags and input
     # else, returns false
     def validArgument(self, argument):
-
+        validTargets = []
+        validIcons = []
+        validSpells = 
         return True
 
         return False
