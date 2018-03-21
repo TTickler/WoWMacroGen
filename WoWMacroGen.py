@@ -1,6 +1,7 @@
 import ConfigParser
 import os
 import WoWClass
+import re
 
 class Macro(object):
     def __init__(self):
@@ -56,6 +57,13 @@ class Macro(object):
 	return False
 
 
+
+#class to handle generation functionality such as creation/placement of macros in
+#specified locations
+class Generator(object):
+    def __init__(self):
+        self.test = 5
+
 class MacroCLI(object):
     def __init__(self):
         self.test = 5
@@ -85,6 +93,16 @@ class MacroCLI(object):
         return True
 
         return False
+
+
+    #returns all flags matching syntax of a valid flag from the command line input
+    #ignores semantics/validity of flags and only focuses on syntax matching
+    def determineFlags(self, cli_input):
+
+        #regular expression to parse out all flags assuming flag starts with '--' and ends with '='
+        flags = re.search('--(.*)=', cli_input)
+
+        return flags
 
 
 if __name__ == "__main__":
