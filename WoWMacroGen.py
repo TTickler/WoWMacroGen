@@ -84,12 +84,10 @@ class MacroCLI(object):
 
         return False
 
-    # returns true if specific argument contains valid flags and input
+    # returns true if specific flag input is valid
     # else, returns false
-    def validArgument(self, argument):
-        validTargets = []
-        validIcons = []
-        validSpells = 
+    def validFlagInput(self, argument):
+
         return True
 
         return False
